@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nirmalya Suite</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        header {
+            position: relative;
+            background-color: black;
+            height: 90vh;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        header img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .card {
+            box-shadow: 4px 4px 10px black;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 40vh;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.nerp.in/assets/images/logo1.png" alt="Nirmalya">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Platform
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Enterprise Resource Planning (ERP)</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Relationship Management (CRM)</a></li>
+                            <li><a class="dropdown-item" href="#">Human Capital Management (HCM)</a></li>
+                            <li><a class="dropdown-item" href="#">Supply Chain Management (SCM)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Manufacturing </a></li>
+                            <li><a class="dropdown-item" href="#">Retail & Distribution</a></li>
+                            <li><a class="dropdown-item" href="#">Building Materials</a></li>
+                            <li><a class="dropdown-item" href="#">Food & Beverage</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Customers
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">Professional Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li><a class="dropdown-item" href="#">White Papers</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Stories</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="#">Security Practices</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Partners
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Partner Login</a></li>
+                            <li><a class="dropdown-item" href="#">Become a Partner</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="#">Security Practices</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button type="button" class="btn" style="background-color: #c100ff;">Contact Sales</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+
+        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay"></div>
+
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://videos.pexels.com/video-files/3209211/3209211-uhd_2560_1440_25fps.mp4"
+                type="video/mp4">
+        </video>
+
+        <!-- The header content -->
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-2" style="font-weight:500;">Integrate People, Process, and Technology with
+                        Nirmalya Suite</h1>
+                    <p class="lead mb-0">Whether you seek progress, transformation, or overall effectiveness, we are
+                        dedicated to guiding you through a seamless and fruitful journey, regardless of your goals or
+                        destination.</p>
+                    <br>
+                    <button type="button" class="btn" style="background-color: #c100ff;">Explore</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row my-2">
+            <div class="col-12 d-flex justify-content-between">
+                <span class="lead" style="border-bottom: 2px solid #c100ff;">Platforms for you</span>
+                <button type="button align-self-end" class="btn btn-outline-secondary">View All</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row p-2 g-md-2">
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise Resource Planning</h5>
+                        <p class="card-text">Improve business processes, enhance transparency, and effectively allocate
+                            time
+                            and resources to embrace change, encourage innovation, adapt to evolving industry trends,
+                            promote innovation, and stay ahead of the competition.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Customer Relationship Management</h5>
+                        <p class="card-text">Establish a cohesive view of your potential customers, clients, partners,
+                            and vendors, giving sales, marketing, and support teams the ability to access current
+                            information to deliver exceptional customer experiences and drive sales growth.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Human Capital Management</h5>
+                        <p class="card-text">Improve decision-making processes, customize employee experiences, and
+                            establish flexible workflows to support growth and adapt to different locations, fostering
+                            business expansion and meeting specific local requirements.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Supply Chain Management</h5>
+                        <p class="card-text">Enhance business agility by responding quickly to market demands and
+                            facilitating efficient planning and execution of materials and goods movement in supply
+                            chain networks for sustainable growth in a changing market.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Warehouse Management</h5>
+                        <p class="card-text">Improve warehouse operations to efficiently handle the demands of the
+                            current market by effectively overseeing intricate fulfillment processes and achieving full
+                            visibility of inventory throughout the distribution center and store shelves.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise Asset Management</h5>
+                        <p class="card-text">Enhance productivity, strategically schedule breaks, optimize asset
+                            performance, and minimize operational disruptions by effectively using web and mobile
+                            applications to increase asset value regardless of location or time.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="display-5 text-center fw-semibold p-4">
+        We ensure a seamless and successful digital transformation
+    </div>
+
+    <header style="height: 40vh;">
+
+        <img src="https://www.nerp.in/assets/images/whobg.jpg" alt="">
+
+        <div class="container h-100">
+            <div class="d-flex h-100 align-items-center justify-content-start">
+                <div class="col-md-6 position">
+                    <span class="lead" style="border-bottom: 2px solid #c100ff;">Platforms for you</span>
+                    <h2 class="mb-3">Unravelling Complexities<br>with Ease</h2>
+                    <p class="mb-4">We bring disruptive, innovative technology and solutions to market with greater
+                        efficiency and speed.</p>
+                    <button type="button" class="btn" style="background-color: #c100ff;">Explore</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row my-2">
+            <div class="col-12 d-flex justify-content-between">
+                <span class="lead" style="border-bottom: 2px solid #c100ff;">Industry Solutions</span>
+                <button type="button align-self-end" class="btn btn-outline-secondary">View All</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row p-2 g-md-2">
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic1.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Manufacturing</h5>
+                        <p class="card-text">Enhance operational efficiency by improving processes and tasks to maximize
+                            output, minimize wasted resources, gain valuable insights, and data-driven knowledge for
+                            informed decision-making and strategic planning.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic2.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Finance and Banking</h5>
+                        <p class="card-text">Harness advanced business intelligence tools and strategies to drive
+                            innovation, enhance customer satisfaction, and optimize profits for all stakeholders,
+                            leveraging predictive and intelligent capabilities.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic3.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Building Materials</h5>
+                        <p class="card-text">Address supply and demand challenges in a timely manner, while leveraging
+                            an integrated platform for construction materials to drive innovation and sustainability for
+                            the future.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic4.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Food and Beverage</h5>
+                        <p class="card-text">Elevate customer engagement, discover cutting-edge transaction techniques,
+                            and broaden your reach in the food and beverage industry to cultivate strong customer
+                            relationships.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic5.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare</h5>
+                        <p class="card-text">Enhance operational efficiency by optimizing processes and procedures,
+                            anticipate outcomes through strategic planning, and cultivate a culture of continuous
+                            improvement within the organization.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <img src="https://www.nerp.in/assets/images/industry-pic6.jpg" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotels and Hospitality</h5>
+                        <p class="card-text">Automate the process of establishing connections among your customers'
+                            engagements using advanced customer service solutions equipped with predictive and
+                            intelligent capabilities.</p>
+                        <a href="#" class="btn" style="background-color: #c100ff;">View More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Swiper Container -->
+    <h2 class="text-center p-4">Accelerated benefits that our esteemed clientele have achieved</h2>
+    <div class="swiper">
+        <div class="swiper-wrapper text-center align-items-center">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.nerp.in/assets/images/increasing.png" class="img-fluid mb-3" alt="Slide 1 Image">
+                <h3 class="text-dark">Increase Sales</h3>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.nerp.in/assets/images/transparency.png" class="img-fluid mb-3"
+                    alt="Slide 2 Image">
+                <h3 class="text-dark">Transparency</h3>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.nerp.in/assets/images/times.png" class="img-fluid mb-3" alt="Slide 3 Image">
+                <h3 class="text-dark">Reduce Leads Times</h3>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.nerp.in/assets/images/lower.png" class="img-fluid mb-3" alt="Slide 3 Image">
+                <h3 class="text-dark">Lower Costs</h3>
+            </div>
+
+        </div>
+
+        <!-- Optional Scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <footer style="background-color: #c100ff; height: fit-content;" class="footer">
+        <div class="container-fluid text-white p-4">
+
+            <div class="row mb-4">
+                <div class="col-12 border-bottom text-left">
+                    <img src="https://www.nerp.in/assets/images/logo.png" alt="Nirmalya">
+                </div>
+            </div>
+
+            <div class="row border-bottom">
+                <!-- Company -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">Company</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">About</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Security Practice</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Diversity</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Corporate Responsibility</a>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">Resources</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">Blog</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Career</a>
+                    <a href="#" class="d-block text-white text-decoration-none">White Papers</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Customer Stories</a>
+                </div>
+
+                <!-- Learn -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">Learn</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">Industry 4.0</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Digital Twins</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Cloud Computing</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Artificial Intelligence</a>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">Legal</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">Compliance</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Terms of Use</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Cookies Policy</a>
+                </div>
+
+                <!-- News & Events -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">News & Events</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">News</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Search Events</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Life @ Nirmalya</a>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5 class="mb-2">Contact</h5>
+                    <a href="#" class="d-block text-white text-decoration-none">Sales: +91 9866522065</a>
+                    <a href="#" class="d-block text-white text-decoration-none">How can we help?</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Subscribe to emails</a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-4 justify-content-between align-items-center">
+                <div class="col-md-6 text-start text-white">
+                    &copy; Nirmalya 2025
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-3">
+                        <i class="fa-brands fa-square-x-twitter fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fa-brands fa-square-facebook fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fa-brands fa-linkedin fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
